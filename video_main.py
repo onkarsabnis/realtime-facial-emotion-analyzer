@@ -113,6 +113,7 @@ class EmotionAnalysisVideo:
                         )
                         # Detect emotion
                         emotions = self.emotion_detector.detect_emotion(smaller_frame)
+                        logger.info("Emotion is: {}".format(emotions))
 
                     # Annotate the current frame with emotion detection data
                     frame = self.annotate_emotion_data(emotions, frame, resize_scale)
